@@ -60,8 +60,20 @@ h1 {
 .hide {
   display: none;
 }
+.text {
+  padding-top: 80px;
+}
+.text video {
+  margin-bottom: 20px;
+}
+.videos {
+  display: none;
+}
 
 @media only screen and (min-width: 1025px) {
+  .videos {
+    display: block;
+  }
   nav {
     position: fixed;
     left: 0; top: 0; right: 0;
@@ -88,8 +100,14 @@ h1 {
     opacity: .6;
   }
   .content {
-    position: fixed;
+    position: relative;
     z-index: 2;
     left: 200px;
+  }
+  .text {
+    padding-top: 200vh;
+  }
+  .text video {
+    display: none;
   }
 }
