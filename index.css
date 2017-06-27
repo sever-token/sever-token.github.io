@@ -97,7 +97,7 @@ h1 {
     left: 50%; right: 0;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
-    opacity: .6;
+    opacity: .5;
   }
   .content {
     position: relative;
