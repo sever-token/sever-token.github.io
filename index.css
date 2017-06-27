@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'fav';
+  src: url('Favorit_Medium.woff') format('woff');
+  font-style:   normal;
+  font-weight:  500;
+}
+
+@font-face {
+  font-family: 'fav';
+  src: url('Favorit_Bold.woff') format('woff');
+  font-style:   bold;
+  font-weight:  700;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  color: #F8F8F8;
+  background: #000;
+  font-family: 'fav', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+video {
+  width: 100%;
+}
+nav {
+  padding: 20px;
+}
+.logo {
+  position: fixed;
+  right: 20px; top: 20px;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: .75;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #F8F8F8;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+}
+.content {
+  padding: 20px;
+}
+h1 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+@media only screen and (min-width: 420px) {
+  nav {
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 3;
+  }
+  .logo {
+    font-size: 80px;
+    left: 0; top: 0;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  video {
+    position: fixed;
+    z-index: 1;
+  }
+  .content {
+    position: fixed;
+    z-index: 2;
+  }
+}
