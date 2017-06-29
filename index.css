@@ -28,7 +28,7 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 video {
   width: 100%;
@@ -50,7 +50,7 @@ nav {
 }
 .content {
   padding: 20px;
-  max-width: 900px;
+  max-width: 600px;
 }
 h1 {
   margin-top: 0;
@@ -85,7 +85,7 @@ h1 {
     left: 20px; top: 20px;
   }
   h1 {
-    font-size: 3em;
+    font-size: 2em;
   }
   .portrait video {
     width: auto;
@@ -97,7 +97,7 @@ h1 {
     left: 50%; right: 0;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
-    opacity: .5;
+    // opacity: .5;
   }
   .content {
     position: relative;
@@ -111,7 +111,7 @@ h1 {
     display: none;
   }
   .text p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     max-width: 500px;
   }
 }
