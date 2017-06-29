@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   };
-  locationRequest.open('GET', 'http://freegeoip.net/json/', true);
+  locationRequest.open('GET', 'https://freegeoip.net/json/', true);
   locationRequest.send();
 
   var chatRequest = new XMLHttpRequest();
