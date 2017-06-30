@@ -3,11 +3,17 @@ document.addEventListener("DOMContentLoaded", function() {
   var desktop = document.getElementById("desktop");
   var mobile = document.getElementById("mobile");
 
+  var current = 0;
+
   if (window.innerWidth > 1024) {
     mobile.remove();
   } else {
     desktop.remove();
   }
+
+  setTimeout(function() {
+    document.getElementById("slide-1").classList.add("active");
+  }, 100);
 
   window.addEventListener("resize", handleResize);
   function handleResize() {

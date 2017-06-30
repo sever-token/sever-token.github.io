@@ -148,7 +148,7 @@ h1 {
     height: 100%;
   }
   video {
-    position: fixed;
+    position: absolute;
     z-index: 1;
     left: 50%; right: 0;
     transform: translateX(-50%);
@@ -159,7 +159,19 @@ h1 {
     height: 100%; width: 100%;
   }
   .slide {
-
+    width: 100vw; height: 100vh;
+  }
+  .text {
+    -webkit-transition: opacity .3s 2s ease-in-out;
+    transition: opacity .3s 2s ease-in-out;
+    opacity: 0;
+  }
+  .slide.active {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+  }
+  .slide.active .text {
+    opacity: 1;
   }
   .slide .text {
     padding-left: 240px;
