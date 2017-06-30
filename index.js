@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
       text = slides[current].children[1];
       if (text) text.classList.add("active");
-    }, 3000);
+    }, 1000);
   });
 
   arrowLeft.addEventListener("click", function() {
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
       text = slides[current].children[1];
       if (text) text.classList.add("active");
-    },5000);
+    },2000);
   });
 
   //menu event listners
