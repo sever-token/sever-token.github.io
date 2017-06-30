@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
   arrowRight.addEventListener("click", function() {
     var video = slides[current].children[0];
     var text = slides[current].children[1];
-    pauseVideo(video);
+    if (video) pauseVideo(video);
     slides[current].classList.remove("active");
     if (text) text.classList.remove("active");
 
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setTimeout(function() {
       video = slides[current].children[0];
-      playVideo(video);
+      if (video) playVideo(video);
       slides[current].classList.add("active");
     }, 300);
 
