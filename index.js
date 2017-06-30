@@ -2,8 +2,33 @@ document.addEventListener("DOMContentLoaded", function() {
   var body = document.querySelector("body");
   var desktop = document.getElementById("desktop");
   var mobile = document.getElementById("mobile");
+  var arrowLeft = document.getElementById("arrow-left");
+  var arrowRight = document.getElementById("arrow-right");
+  var slidesEl = document.getElementById("slides");
+  var slides = slidesEl.children;
 
   var current = 0;
+
+  //arrows eventlistners
+  arrowRight.addEventListener("click", function() {
+    var video = slides[current].children[0];
+    pauseVideo(video);
+
+    slides[current].classList.remove("active");
+    if (current < slides.length - 1) {
+      current ++;
+    } else {
+      current = 0;
+    }
+
+    setTimeout(function() {
+      video = slides[current].children[0];
+      playVideo(video);
+      slides[current].classList.add("active");
+    }, 300);
+  });
+
+  //menu event listners
 
   if (window.innerWidth > 1024) {
     mobile.remove();
@@ -12,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   setTimeout(function() {
-    document.getElementById("slide-1").classList.add("active");
+    slides[0].classList.add("active");
   }, 100);
 
   window.addEventListener("resize", handleResize);
