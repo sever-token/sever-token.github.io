@@ -148,8 +148,8 @@ h1 {
     height: 100%;
   }
   video {
-    -webkit-transition: opacity .6s ease-in-out;
-    transition: opacity .6s ease-in-out;
+    -webkit-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
     opacity: 0;
     position: absolute;
     z-index: 1;
@@ -167,8 +167,8 @@ h1 {
     width: 100vw; height: 100vh;
   }
   .text {
-    -webkit-transition: opacity .6s ease-in-out;
-    transition: opacity .6s ease-in-out;
+    -webkit-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
     opacity: 0;
   }
   .text.active {

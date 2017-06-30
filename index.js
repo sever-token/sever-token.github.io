@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
       text = slides[current].children[1];
       if (text) text.classList.add("active");
-    }, 3000);
+    },5000);
   });
 
   //menu event listners
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   setTimeout(function() {
     slides[0].children[1].classList.add("active");
-  }, 3000);
+  }, 5000);
 
   window.addEventListener("resize", handleResize);
   function handleResize() {
