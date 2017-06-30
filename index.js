@@ -13,20 +13,36 @@ document.addEventListener("DOMContentLoaded", function() {
     var video = slides[current].children[0];
     var text = slides[current].children[1];
     if (video) pauseVideo(video);
+
+    // var t = setInterval(function () {
+    //   video.volume = vol;
+    //   vol -= 0.1;
+    //   if (vol < 0.1) {
+    //     audio3.volume = 0;
+    //     clearInterval(t);
+    //   }
+    // }, 300);
+
     slides[current].classList.remove("active");
     if (text) text.classList.remove("active");
 
-    if (current < slides.length - 1) {
-      current ++;
+    console.log(current, slides.length)
+
+    if (current == slides.length - 2) {
+      arrowRight.classList.add("hide");
+      arrowLeft.classList.remove("hide");
     } else {
-      current = 0;
+      arrowRight.classList.remove("hide");
+      arrowLeft.classList.remove("hide");
     }
 
-    setTimeout(function() {
+    current ++;
+
+    // setTimeout(function() {
       video = slides[current].children[0];
       if (video) playVideo(video);
       slides[current].classList.add("active");
-    }, 300);
+    // }, 300);
 
     setTimeout(function() {
       text = slides[current].children[1];
@@ -41,11 +57,19 @@ document.addEventListener("DOMContentLoaded", function() {
     slides[current].classList.remove("active");
     if (text) text.classList.remove("active");
 
-    if (current > 1) {
-      current --;
+    if (current == 1) {
+      arrowRight.classList.remove("hide");
+      arrowLeft.classList.add("hide");
     } else {
-      current = slides.length - 1;
+      arrowRight.classList.remove("hide");
+      arrowLeft.classList.remove("hide");
     }
+
+    // if (current > 1) {
+      current --;
+    // } else {
+      // current = slides.length - 1;
+    // }
 
     setTimeout(function() {
       video = slides[current].children[0];
