@@ -12,9 +12,11 @@ document.addEventListener("DOMContentLoaded", function() {
   //arrows eventlistners
   arrowRight.addEventListener("click", function() {
     var video = slides[current].children[0];
+    var text = slides[current].children[1];
     pauseVideo(video);
-
     slides[current].classList.remove("active");
+    if (text) text.classList.remove("active");
+
     if (current < slides.length - 1) {
       current ++;
     } else {
@@ -26,6 +28,11 @@ document.addEventListener("DOMContentLoaded", function() {
       playVideo(video);
       slides[current].classList.add("active");
     }, 300);
+
+    setTimeout(function() {
+      text = slides[current].children[1];
+      if (text) text.classList.add("active");
+    }, 3000);
   });
 
   //menu event listners
@@ -36,9 +43,11 @@ document.addEventListener("DOMContentLoaded", function() {
     desktop.remove();
   }
 
+  slides[0].classList.add("active");
+
   setTimeout(function() {
-    slides[0].classList.add("active");
-  }, 100);
+    slides[0].children[1].classList.add("active");
+  }, 3000);
 
   window.addEventListener("resize", handleResize);
   function handleResize() {
