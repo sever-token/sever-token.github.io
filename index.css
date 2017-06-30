@@ -146,7 +146,7 @@ h1 {
   }
   nav {
     position: fixed;
-    left: 0; top: 0; right: 0;
+    left: 0; top: 0;
     max-width: 1400px;
     z-index: 3;
     padding: 40px;
@@ -157,6 +157,7 @@ h1 {
   }
   h1 {
     font-size: 3.6em;
+    line-height: 1;
   }
   .portrait video {
     width: auto;
@@ -173,10 +174,11 @@ h1 {
   .content {
     position: relative;
     z-index: 2;
+    padding: 40px;
     left: 200px;
   }
   .text {
-    padding-top: 200vh;
+    padding-top: 0;
   }
   .text video {
     display: none;
