@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var current = 0;
 
-  //arrows eventlistners
   arrowRight.addEventListener("click", function() {
     var video = slides[current].children[0];
     var text = slides[current].children[1];
@@ -21,6 +20,31 @@ document.addEventListener("DOMContentLoaded", function() {
       current ++;
     } else {
       current = 0;
+    }
+
+    setTimeout(function() {
+      video = slides[current].children[0];
+      if (video) playVideo(video);
+      slides[current].classList.add("active");
+    }, 300);
+
+    setTimeout(function() {
+      text = slides[current].children[1];
+      if (text) text.classList.add("active");
+    }, 3000);
+  });
+
+  arrowLeft.addEventListener("click", function() {
+    var video = slides[current].children[0];
+    var text = slides[current].children[1];
+    if (video) pauseVideo(video);
+    slides[current].classList.remove("active");
+    if (text) text.classList.remove("active");
+
+    if (current > 1) {
+      current --;
+    } else {
+      current = slides.length - 1;
     }
 
     setTimeout(function() {
