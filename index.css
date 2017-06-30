@@ -153,10 +153,11 @@ h1 {
   }
   .logo {
     font-size: 120px;
-    right: 60px; top: 40px;
+    right: 60px; top: 43px;
   }
   h1 {
     font-size: 3.6em;
+    margin-top: -3px;
     line-height: 1;
   }
   .portrait video {
