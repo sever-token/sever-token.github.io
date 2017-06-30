@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
   var body = document.querySelector("body");
   var chatEl = document.getElementById("chat");
+  var balance = document.getElementById("balance");
+  var closeButton = document.getElementById("close-button");
   var chatElList = document.getElementById("chat-list");
+  var chatElWrapper = document.getElementById("chat-wrapper");
   var messagesArray = [];
 
   var locationRequest = new XMLHttpRequest();
@@ -38,28 +41,30 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
       chatEl.classList.add("active");
       var i = 0;
-      var balance = document.createElement('span');
-      balance.classList.add("balance");
-      balance.innerHTML = "Your balance: " + Math.round( 100.00 * 2 / (1 + Math.exp(-0.1 * (response.latitude-60)))) + " SVR";
 
       var int = setInterval(function() {
         var message = document.createElement('li');
         if (i==1) {
           message.innerHTML = messagesArray[i] + response.city + ", " + response.country_code + ".";
         } else if (i==2) {
-          body.appendChild(balance);
+          balance.innerHTML = "Your balance: " + Math.round( 100.00 * 2 / (1 + Math.exp(-0.1 * (response.latitude-60)))) + " SVR";
           message.innerHTML = messagesArray[i];
         } else {
           message.innerHTML = messagesArray[i];
         }
         chatElList.appendChild(message);
-        chatEl.scrollTop = chatEl.offsetHeight;
+        chatElWrapper.scrollTop = 1000;
         if (i < messagesArray.length - 1) {
           i++;
         } else {
           clearInterval(int);
         }
       }, 2000);
+
+      closeButton.addEventListener("click", function() {
+        chatEl.classList.remove("active");
+        clearInterval(int);
+      });
     }, 300);
   }
 });
