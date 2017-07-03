@@ -14,19 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var text = slides[current].children[1];
     if (video) pauseVideo(video);
 
-    // var t = setInterval(function () {
-    //   video.volume = vol;
-    //   vol -= 0.1;
-    //   if (vol < 0.1) {
-    //     audio3.volume = 0;
-    //     clearInterval(t);
-    //   }
-    // }, 300);
-
     slides[current].classList.remove("active");
     if (text) text.classList.remove("active");
-
-    console.log(current, slides.length)
 
     if (current == slides.length - 2) {
       arrowRight.classList.add("hide");
@@ -38,11 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     current ++;
 
-    // setTimeout(function() {
-      video = slides[current].children[0];
-      if (video) playVideo(video);
-      slides[current].classList.add("active");
-    // }, 300);
+    video = slides[current].children[0];
+    if (video) playVideo(video);
+    slides[current].classList.add("active");
 
     setTimeout(function() {
       text = slides[current].children[1];

@@ -37,29 +37,90 @@ document.addEventListener("DOMContentLoaded", function() {
   chatRequest.open('GET', '/chat.json', true);
   chatRequest.send();
 
+  var isPaused = false;
+
   function initChat(response) {
     setTimeout(function() {
       chatEl.classList.add("active");
       var i = 0;
+      var cityToTravel,
+          latToTravel,
+          relativeBalance;
 
       var int = setInterval(function() {
-        var message = document.createElement('li');
-        if (i==1) {
-          message.innerHTML = messagesArray[i] + response.city + ", " + response.country_code + ".";
-        } else if (i==2) {
-          balance.innerHTML = "Your balance: " + Math.round( 100.00 * 2 / (1 + Math.exp(-0.1 * (response.latitude-60)))) + " SVR";
-          message.innerHTML = messagesArray[i];
-        } else {
-          message.innerHTML = messagesArray[i];
+        if (!isPaused) {
+          var message = document.createElement('li');
+          if (i==0) {
+            message.innerHTML = messagesArray[i] + response.city + ", " + response.country_code + ".";
+          } else if (i==1) {
+            balance.innerHTML = "BAL = " + Math.round( 100.00 * 2 / (1 + Math.exp(-0.1 * (response.latitude-60))) * 100) / 100 + " SVR";
+            message.innerHTML = messagesArray[i];
+          } else if (i==6) {
+            isPaused = true;
+
+            var murmansk = document.createElement('div');
+            murmansk.innerHTML = "Murmansk, RU";
+            message.appendChild(murmansk);
+            var tromso = document.createElement('div');
+            tromso.innerHTML = "Tromsø, NO";
+            message.appendChild(tromso);
+            var reykjavik = document.createElement('div');
+            reykjavik.innerHTML = "Reykjavik, IS";
+            message.appendChild(reykjavik);
+            var anchorage = document.createElement('div');
+            anchorage.innerHTML = "Anchorage, US";
+            message.appendChild(anchorage);
+
+            murmansk.addEventListener("click", function() {
+              isPaused = false;
+              cityToTravel = 'Murmansk, RU';
+              latToTravel = '68.9585';
+              relativeBalance = '178.37';
+            });
+            tromso.addEventListener("click", function() {
+              isPaused = false;
+              cityToTravel = 'Tromsø, NO';
+              latToTravel = '69.6492';
+              relativeBalance = '179.52';
+            });
+            reykjavik.addEventListener("click", function() {
+              isPaused = false;
+              cityToTravel = 'Reykjavik, IS';
+              latToTravel = '64.1265';
+              relativeBalance = '148.69';
+            });
+            anchorage.addEventListener("click", function() {
+              isPaused = false;
+              cityToTravel = 'Anchorage, US';
+              latToTravel = '61.2181';
+              relativeBalance = '112.73';
+            });
+          } else if (i==7) {
+            message.innerHTML = 'Welcome to ' + cityToTravel + '. Your current latiude is ' + latToTravel;
+            balance.innerHTML = "BAL = " + relativeBalance + " SVR";
+          } else if (i==10) {
+            isPaused = true;
+            var button = document.createElement('div');
+            button.innerHTML = "Buy dinner at restaurant – 6.00 SVR";
+            message.appendChild(button);
+            button.addEventListener("click", function() {
+              isPaused = false;
+              relativeBalance = Number(relativeBalance) - 6;
+              balance.innerHTML = "BAL = " + relativeBalance + " SVR";
+            });
+          } else {
+            message.innerHTML = messagesArray[i];
+          }
+          chatElList.appendChild(message);
+          chatElWrapper.scrollTop = 1000;
+
+          if (i < messagesArray.length - 1) {
+            i++;
+          } else {
+            clearInterval(int);
+          }
         }
-        chatElList.appendChild(message);
-        chatElWrapper.scrollTop = 1000;
-        if (i < messagesArray.length - 1) {
-          i++;
-        } else {
-          clearInterval(int);
-        }
-      }, 2000);
+      }, 100);
 
       closeButton.addEventListener("click", function() {
         chatEl.classList.remove("active");

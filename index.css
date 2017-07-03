@@ -42,6 +42,16 @@ h1 {
   display: none;
 }
 
+.chat li div {
+  cursor: pointer;
+
+  border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  display: inline-block;
+  text-align: center;
+}
 
 .chat {
   -webkit-transition: opacity .2s ease-in-out, -webkit-transform .2s ease-in-out;
@@ -85,7 +95,7 @@ h1 {
   z-index: 1;
   font-size: .8em;
   padding: 10px;
-  padding-right: 30px;
+  padding-right: 14px;
   padding-bottom: 20px;
 }
 .balance {
