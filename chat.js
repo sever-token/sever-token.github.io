@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 isPaused = false;
                 relativeBalance = Number(relativeBalance) - 6;
                 balance.innerHTML = "BAL = " + relativeBalance + " SVR";
+                i++;
               });
             } else {
               message.innerHTML = messagesArray[i];
@@ -145,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 isPaused = false;
                 relativeBalance = relativeBalance - 16;
                 balance.innerHTML = "BAL = " + Math.round(relativeBalance * 100) / 100 + " SVR";
+                i++;
               });
             } else {
               message.innerHTML = messagesArray[i];
