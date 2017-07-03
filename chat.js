@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (i==0) {
               message.innerHTML = messagesArray[i] + response.city + ", " + response.country_code + ".";
             } else if (i==1) {
-              balance.innerHTML = "BAL = " + Math.round( 100.00 * 2 / (1 + Math.exp(-0.1 * (response.latitude-60))) * 100) / 100 + " SVR";
+              balance.innerHTML = "BAL = " + Math.round( 100.00 * 2 / (1 + Math.exp(-0.1 * (response.latitude-60))) * 4000) / 100 + " SVR";
               message.innerHTML = messagesArray[i];
             } else if (i==6) {
               isPaused = true;
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
               clearInterval(int);
             }
           }
-        }, 100);
+        }, 4000);
       } else {
         messagesArray = messagesArray.messages2;
 
@@ -134,9 +134,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (i==0) {
               message.innerHTML = messagesArray[i] + response.city + ", " + response.country_code + ".";
             } else if (i==1) {
-              balance.innerHTML = "BAL = " + Math.round( 100.00 * 2 / (1 + Math.exp(-0.1 * (response.latitude-60))) * 100) / 100 + " SVR";
+              balance.innerHTML = "BAL = " + Math.round( 100.00 * 2 / (1 + Math.exp(-0.1 * (response.latitude-60))) * 4000) / 100 + " SVR";
               message.innerHTML = messagesArray[i];
-              relativeBalance = Math.round( 100.00 * 2 / (1 + Math.exp(-0.1 * (response.latitude-60))) * 100) / 100;
+              relativeBalance = Math.round( 100.00 * 2 / (1 + Math.exp(-0.1 * (response.latitude-60))) * 4000) / 100;
             } else if (i==6) {
               isPaused = true;
               var button = document.createElement('div');
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function() {
               button.addEventListener("click", function() {
                 isPaused = false;
                 relativeBalance = relativeBalance - 16;
-                balance.innerHTML = "BAL = " + Math.round(relativeBalance * 100) / 100 + " SVR";
+                balance.innerHTML = "BAL = " + Math.round(relativeBalance * 4000) / 100 + " SVR";
                 i++;
               });
             } else {
@@ -160,13 +160,13 @@ document.addEventListener("DOMContentLoaded", function() {
               clearInterval(int);
             }
           }
-        }, 100);
+        }, 4000);
       }
 
       closeButton.addEventListener("click", function() {
         chatEl.classList.remove("active");
         clearInterval(int);
       });
-    }, 300);
+    }, 7000);
   }
 });
