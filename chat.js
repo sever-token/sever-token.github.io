@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var OK = 200;
     if (chatRequest.readyState === DONE) {
       if (chatRequest.status === OK) {
-        messagesArray = JSON.parse(chatRequest.responseText).messages;
+        messagesArray = JSON.parse(chatRequest.responseText);
       } else {
         console.log('Error: ' + chatRequest.status);
       }
@@ -47,80 +47,119 @@ document.addEventListener("DOMContentLoaded", function() {
           latToTravel,
           relativeBalance;
 
-      var int = setInterval(function() {
-        if (!isPaused) {
-          var message = document.createElement('li');
-          if (i==0) {
-            message.innerHTML = messagesArray[i] + response.city + ", " + response.country_code + ".";
-          } else if (i==1) {
-            balance.innerHTML = "BAL = " + Math.round( 100.00 * 2 / (1 + Math.exp(-0.1 * (response.latitude-60))) * 100) / 100 + " SVR";
-            message.innerHTML = messagesArray[i];
-          } else if (i==6) {
-            isPaused = true;
+      if (response.latitude < 60) {
+        messagesArray = messagesArray.messages1;
 
-            var murmansk = document.createElement('div');
-            murmansk.innerHTML = "Murmansk, RU";
-            message.appendChild(murmansk);
-            var tromso = document.createElement('div');
-            tromso.innerHTML = "Tromsø, NO";
-            message.appendChild(tromso);
-            var reykjavik = document.createElement('div');
-            reykjavik.innerHTML = "Reykjavik, IS";
-            message.appendChild(reykjavik);
-            var anchorage = document.createElement('div');
-            anchorage.innerHTML = "Anchorage, US";
-            message.appendChild(anchorage);
+        var int = setInterval(function() {
+          if (!isPaused) {
+            var message = document.createElement('li');
+            if (i==0) {
+              message.innerHTML = messagesArray[i] + response.city + ", " + response.country_code + ".";
+            } else if (i==1) {
+              balance.innerHTML = "BAL = " + Math.round( 100.00 * 2 / (1 + Math.exp(-0.1 * (response.latitude-60))) * 100) / 100 + " SVR";
+              message.innerHTML = messagesArray[i];
+            } else if (i==6) {
+              isPaused = true;
 
-            murmansk.addEventListener("click", function() {
-              isPaused = false;
-              cityToTravel = 'Murmansk, RU';
-              latToTravel = '68.9585';
-              relativeBalance = '178.37';
-            });
-            tromso.addEventListener("click", function() {
-              isPaused = false;
-              cityToTravel = 'Tromsø, NO';
-              latToTravel = '69.6492';
-              relativeBalance = '179.52';
-            });
-            reykjavik.addEventListener("click", function() {
-              isPaused = false;
-              cityToTravel = 'Reykjavik, IS';
-              latToTravel = '64.1265';
-              relativeBalance = '148.69';
-            });
-            anchorage.addEventListener("click", function() {
-              isPaused = false;
-              cityToTravel = 'Anchorage, US';
-              latToTravel = '61.2181';
-              relativeBalance = '112.73';
-            });
-          } else if (i==7) {
-            message.innerHTML = 'Welcome to ' + cityToTravel + '. Your current latiude is ' + latToTravel;
-            balance.innerHTML = "BAL = " + relativeBalance + " SVR";
-          } else if (i==10) {
-            isPaused = true;
-            var button = document.createElement('div');
-            button.innerHTML = "Buy dinner at restaurant – 6.00 SVR";
-            message.appendChild(button);
-            button.addEventListener("click", function() {
-              isPaused = false;
-              relativeBalance = Number(relativeBalance) - 6;
+              var murmansk = document.createElement('div');
+              murmansk.innerHTML = "Murmansk, RU";
+              message.appendChild(murmansk);
+              var tromso = document.createElement('div');
+              tromso.innerHTML = "Tromsø, NO";
+              message.appendChild(tromso);
+              var reykjavik = document.createElement('div');
+              reykjavik.innerHTML = "Reykjavik, IS";
+              message.appendChild(reykjavik);
+              var anchorage = document.createElement('div');
+              anchorage.innerHTML = "Anchorage, US";
+              message.appendChild(anchorage);
+
+              murmansk.addEventListener("click", function() {
+                isPaused = false;
+                cityToTravel = 'Murmansk, RU';
+                latToTravel = '68.9585';
+                relativeBalance = '178.37';
+              });
+              tromso.addEventListener("click", function() {
+                isPaused = false;
+                cityToTravel = 'Tromsø, NO';
+                latToTravel = '69.6492';
+                relativeBalance = '179.52';
+              });
+              reykjavik.addEventListener("click", function() {
+                isPaused = false;
+                cityToTravel = 'Reykjavik, IS';
+                latToTravel = '64.1265';
+                relativeBalance = '148.69';
+              });
+              anchorage.addEventListener("click", function() {
+                isPaused = false;
+                cityToTravel = 'Anchorage, US';
+                latToTravel = '61.2181';
+                relativeBalance = '112.73';
+              });
+            } else if (i==7) {
+              message.innerHTML = 'Welcome to ' + cityToTravel + '. Your current latitude is ' + latToTravel;
               balance.innerHTML = "BAL = " + relativeBalance + " SVR";
-            });
-          } else {
-            message.innerHTML = messagesArray[i];
-          }
-          chatElList.appendChild(message);
-          chatElWrapper.scrollTop = 1000;
+            } else if (i==10) {
+              isPaused = true;
+              var button = document.createElement('div');
+              button.innerHTML = "Buy dinner at restaurant – 6.00 SVR";
+              message.appendChild(button);
+              button.addEventListener("click", function() {
+                isPaused = false;
+                relativeBalance = Number(relativeBalance) - 6;
+                balance.innerHTML = "BAL = " + relativeBalance + " SVR";
+              });
+            } else {
+              message.innerHTML = messagesArray[i];
+            }
+            chatElList.appendChild(message);
+            chatElWrapper.scrollTop = 1000;
 
-          if (i < messagesArray.length - 1) {
-            i++;
-          } else {
-            clearInterval(int);
+            if (i < messagesArray.length - 1) {
+              i++;
+            } else {
+              clearInterval(int);
+            }
           }
-        }
-      }, 100);
+        }, 100);
+      } else {
+        messagesArray = messagesArray.messages2;
+
+        var int = setInterval(function() {
+          if (!isPaused) {
+            var message = document.createElement('li');
+            if (i==0) {
+              message.innerHTML = messagesArray[i] + response.city + ", " + response.country_code + ".";
+            } else if (i==1) {
+              balance.innerHTML = "BAL = " + Math.round( 100.00 * 2 / (1 + Math.exp(-0.1 * (response.latitude-60))) * 100) / 100 + " SVR";
+              message.innerHTML = messagesArray[i];
+              relativeBalance = Math.round( 100.00 * 2 / (1 + Math.exp(-0.1 * (response.latitude-60))) * 100) / 100;
+            } else if (i==6) {
+              isPaused = true;
+              var button = document.createElement('div');
+              button.innerHTML = "Buy groceries at local shop – 16.00 SVR";
+              message.appendChild(button);
+              button.addEventListener("click", function() {
+                isPaused = false;
+                relativeBalance = relativeBalance - 16;
+                balance.innerHTML = "BAL = " + Math.round(relativeBalance * 100) / 100 + " SVR";
+              });
+            } else {
+              message.innerHTML = messagesArray[i];
+            }
+            chatElList.appendChild(message);
+            chatElWrapper.scrollTop = 1000;
+
+            if (i < messagesArray.length - 1) {
+              i++;
+            } else {
+              clearInterval(int);
+            }
+          }
+        }, 100);
+      }
 
       closeButton.addEventListener("click", function() {
         chatEl.classList.remove("active");
