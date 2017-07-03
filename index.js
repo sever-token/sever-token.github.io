@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   var body = document.querySelector("body");
   var desktop = document.getElementById("desktop");
+  var desktopMenu = document.getElementById("desktop-menu").children;
   var mobile = document.getElementById("mobile");
   var arrowLeft = document.getElementById("arrow-left");
   var arrowRight = document.getElementById("arrow-right");
@@ -8,6 +9,36 @@ document.addEventListener("DOMContentLoaded", function() {
   var slides = slidesEl.children;
 
   var current = 0;
+
+  setInterval(function() {
+    if (current == 0) {
+      desktopMenu[0].classList.add("active");
+    } else if (current == 1) {
+      desktopMenu[0].classList.add("active");
+    }
+
+  }, 300);
+
+  desktopMenu[0].addEventListener("click", function() {
+    if (current !== 0) {
+      var video = slides[current].children[0];
+      var text = slides[current].children[1];
+      if (video) pauseVideo(video);
+      slides[current].classList.remove("active");
+      if (text) text.classList.remove("active");
+
+      current = 0;
+
+      video = slides[current].children[0];
+      if (video) playVideo(video);
+      slides[current].classList.add("active");
+
+      setTimeout(function() {
+        text = slides[current].children[1];
+        if (text) text.classList.add("active");
+      }, 1000);
+    }
+  });
 
   arrowRight.addEventListener("click", function() {
     var video = slides[current].children[0];
@@ -52,22 +83,16 @@ document.addEventListener("DOMContentLoaded", function() {
       arrowLeft.classList.remove("hide");
     }
 
-    // if (current > 1) {
-      current --;
-    // } else {
-      // current = slides.length - 1;
-    // }
+    current --;
 
-    setTimeout(function() {
-      video = slides[current].children[0];
-      if (video) playVideo(video);
-      slides[current].classList.add("active");
-    }, 300);
+    video = slides[current].children[0];
+    if (video) playVideo(video);
+    slides[current].classList.add("active");
 
     setTimeout(function() {
       text = slides[current].children[1];
       if (text) text.classList.add("active");
-    },2000);
+    }, 1000);
   });
 
   //menu event listners
@@ -82,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   setTimeout(function() {
     slides[0].children[1].classList.add("active");
-  }, 5000);
+  }, 1000);
 
   window.addEventListener("resize", handleResize);
   function handleResize() {

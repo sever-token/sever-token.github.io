@@ -140,10 +140,14 @@ h1 {
     padding: 40px;
   }
   nav li {
+    margin-bottom: 2px;
+  }
+  nav li span {
+    border-bottom: 2px solid transparent;
     cursor: pointer;
   }
-  nav li.active {
-    border-bottom: 1px solid #F8F8F8;
+  nav li.active span {
+    border-bottom: 2px solid #F8F8F8;
   }
   .logo {
     font-size: 80px;
