@@ -31,6 +31,9 @@ nav {
   transform: rotate(-180deg);
   -webkit-transform: rotate(-180deg);
 }
+.text a {
+  color: white;
+}
 .content {
   padding: 20px;
 }
