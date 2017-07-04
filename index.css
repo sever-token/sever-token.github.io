@@ -23,10 +23,19 @@ video {
 nav {
   padding: 20px;
 }
+#mobile video {
+  margin-bottom: 20px;
+}
+#mobile .slide {
+  margin-bottom: 40px;
+}
+#mobile nav {
+  padding-top: 30px;
+}
 .logo {
   position: fixed;
   right: 20px; top: 20px;
-  font-size: 70px;
+  font-size: 40px;
   line-height: .75;
   transform: rotate(-180deg);
   -webkit-transform: rotate(-180deg);
