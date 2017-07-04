@@ -26,6 +26,9 @@ nav {
 #mobile video {
   margin-bottom: 20px;
 }
+#mobile .text {
+  max-width: 600px;
+}
 #mobile .slide {
   margin-bottom: 40px;
 }
