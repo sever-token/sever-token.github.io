@@ -1,14 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
   var body = document.querySelector("body");
   var desktop = document.getElementById("desktop");
-  var desktopMenu = document.getElementById("desktop-menu").children;
+  var desktopMenu = Array.from(document.querySelectorAll("#desktop-menu > li"));
   var mobile = document.getElementById("mobile");
   var arrowLeft = document.getElementById("arrow-left");
   var arrowRight = document.getElementById("arrow-right");
   var slidesEl = document.getElementById("slides");
   var slides = slidesEl.children;
+  var sound = document.querySelector('.sound');
+  var audio = document.querySelector('audio');
 
   var current = 0;
+  var soundStatus = true;
+
+  sound.addEventListener('click', function () {
+    if (soundStatus) {
+      sound.src = '/sound_on.png';
+      soundStatus = false;
+      audio.muted = true;
+    } else {
+      sound.src = '/sound_off.png';
+      soundStatus = true;
+      audio.muted = false;
+    }
+  })
 
   setInterval(function() {
     if (current == 0) {

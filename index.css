@@ -40,8 +40,13 @@ nav {
   right: 20px; top: 20px;
   font-size: 40px;
   line-height: .75;
-  transform: rotate(-180deg);
   -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  z-index: 999;
+}
+.logo:hover {
+  cursor: pointer;
 }
 .text a {
   color: white;
@@ -137,7 +142,9 @@ h1 {
   color: #F8F8F8;
   text-decoration: none;
 }
-
+.sound:hover {
+  cursor: pointer;
+}
 
 @media only screen and (min-width: 1025px) {
   body {
@@ -145,8 +152,16 @@ h1 {
   }
   .lang {
     position: fixed;
-    left: 40px; bottom: 40px;
+    left: 40px; bottom: 70px;
     font-size: .8em;
+  }
+  .sound {
+    background-image: url('/sound_on.png');
+    position: fixed;
+    left: 42px;
+    bottom: 40px;
+    font-size: .8em;
+    max-width: 20px;
   }
   nav {
     position: fixed;
@@ -168,7 +183,7 @@ h1 {
   .logo {
     font-size: 80px;
     right: 60px; top: 43px;
-        padding-left: 2px;
+    padding-left: 2px;
   }
   h1 {
     font-size: 2.2em;
