@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
               clearInterval(int);
             }
           }
-        }, 4000);
+        }, 7000);
       } else {
         messagesArray = messagesArray.messages2;
 
@@ -160,13 +160,13 @@ document.addEventListener("DOMContentLoaded", function() {
               clearInterval(int);
             }
           }
-        }, 4000);
+        }, 7000);
       }
 
       closeButton.addEventListener("click", function() {
         chatEl.classList.remove("active");
         clearInterval(int);
       });
-    }, 7000);
+    }, 24000);
   }
 });

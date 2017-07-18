@@ -125,7 +125,7 @@ h1 {
   height: 12px;
   padding: 5px 10px;
   font-size: 10px;
-  opacity: .9;
+  opacity: 1;
   z-index: 10;
   color: black;
   background: #F8F8F8;
@@ -243,9 +243,6 @@ h1 {
     bottom: 40px; right: 40px;
   }
   .chat .wrapper:before {
-    opacity: .7;
-  }
-  .balance {
     opacity: .7;
   }
   .arrow {
