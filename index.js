@@ -30,58 +30,121 @@ document.addEventListener("DOMContentLoaded", function() {
       desktopMenu[0].classList.add("active");
       desktopMenu[1].classList.remove("active");
       desktopMenu[2].classList.remove("active");
-      desktopMenu[3].classList.remove("active");
-      desktopMenu[4].classList.remove("active");
       desktopMenu[5].classList.remove("active");
-      desktopMenu[6].classList.remove("active");
+      desktopMenu[8].classList.remove("active");
+      desktopMenu[11].classList.remove("active");
+      desktopMenu[14].classList.remove("active");
+
+      desktopMenu[3].classList.remove("subsection_active");
+      desktopMenu[4].classList.remove("subsection_active");
+      desktopMenu[6].classList.remove("subsection_active");
+      desktopMenu[7].classList.remove("subsection_active");
+      desktopMenu[9].classList.remove("subsection_active");
+      desktopMenu[10].classList.remove("subsection_active");
+      desktopMenu[12].classList.remove("subsection_active");
+      desktopMenu[13].classList.remove("subsection_active");
     } else if (current == 1) {
       desktopMenu[0].classList.remove("active");
       desktopMenu[1].classList.add("active");
       desktopMenu[2].classList.remove("active");
-      desktopMenu[3].classList.remove("active");
-      desktopMenu[4].classList.remove("active");
       desktopMenu[5].classList.remove("active");
-      desktopMenu[6].classList.remove("active");
+      desktopMenu[8].classList.remove("active");
+      desktopMenu[11].classList.remove("active");
+      desktopMenu[14].classList.remove("active");
+
+      desktopMenu[3].classList.remove("subsection_active");
+      desktopMenu[4].classList.remove("subsection_active");
+      desktopMenu[6].classList.remove("subsection_active");
+      desktopMenu[7].classList.remove("subsection_active");
+      desktopMenu[9].classList.remove("subsection_active");
+      desktopMenu[10].classList.remove("subsection_active");
+      desktopMenu[12].classList.remove("subsection_active");
+      desktopMenu[13].classList.remove("subsection_active");
     } else if (current == 2 || current == 3) {
       desktopMenu[0].classList.remove("active");
       desktopMenu[1].classList.remove("active");
       desktopMenu[2].classList.add("active");
-      desktopMenu[3].classList.remove("active");
-      desktopMenu[4].classList.remove("active");
       desktopMenu[5].classList.remove("active");
-      desktopMenu[6].classList.remove("active");
+      desktopMenu[8].classList.remove("active");
+      desktopMenu[11].classList.remove("active");
+      desktopMenu[14].classList.remove("active");
+
+      desktopMenu[3].classList.add("subsection_active");
+      desktopMenu[4].classList.add("subsection_active");
+      desktopMenu[6].classList.remove("subsection_active");
+      desktopMenu[7].classList.remove("subsection_active");
+      desktopMenu[9].classList.remove("subsection_active");
+      desktopMenu[10].classList.remove("subsection_active");
+      desktopMenu[12].classList.remove("subsection_active");
+      desktopMenu[13].classList.remove("subsection_active");
     } else if (current == 4 || current == 5) {
       desktopMenu[0].classList.remove("active");
       desktopMenu[1].classList.remove("active");
       desktopMenu[2].classList.remove("active");
-      desktopMenu[3].classList.add("active");
-      desktopMenu[4].classList.remove("active");
-      desktopMenu[5].classList.remove("active");
-      desktopMenu[6].classList.remove("active");
+      desktopMenu[5].classList.add("active");
+      desktopMenu[8].classList.remove("active");
+      desktopMenu[11].classList.remove("active");
+      desktopMenu[14].classList.remove("active");
+
+      desktopMenu[3].classList.remove("subsection_active");
+      desktopMenu[4].classList.remove("subsection_active");
+      desktopMenu[6].classList.add("subsection_active");
+      desktopMenu[7].classList.add("subsection_active");
+      desktopMenu[9].classList.remove("subsection_active");
+      desktopMenu[10].classList.remove("subsection_active");
+      desktopMenu[12].classList.remove("subsection_active");
+      desktopMenu[13].classList.remove("subsection_active");
     } else if (current == 6 || current == 7) {
       desktopMenu[0].classList.remove("active");
       desktopMenu[1].classList.remove("active");
       desktopMenu[2].classList.remove("active");
-      desktopMenu[3].classList.remove("active");
-      desktopMenu[4].classList.add("active");
       desktopMenu[5].classList.remove("active");
-      desktopMenu[6].classList.remove("active");
+      desktopMenu[8].classList.add("active");
+      desktopMenu[11].classList.remove("active");
+      desktopMenu[14].classList.remove("active");
+
+      desktopMenu[3].classList.remove("subsection_active");
+      desktopMenu[4].classList.remove("subsection_active");
+      desktopMenu[6].classList.remove("subsection_active");
+      desktopMenu[7].classList.remove("subsection_active");
+      desktopMenu[9].classList.add("subsection_active");
+      desktopMenu[10].classList.add("subsection_active");
+      desktopMenu[12].classList.remove("subsection_active");
+      desktopMenu[13].classList.remove("subsection_active");
     } else if (current == 8 || current == 9) {
       desktopMenu[0].classList.remove("active");
       desktopMenu[1].classList.remove("active");
       desktopMenu[2].classList.remove("active");
-      desktopMenu[3].classList.remove("active");
-      desktopMenu[4].classList.remove("active");
-      desktopMenu[5].classList.add("active");
-      desktopMenu[6].classList.remove("active");
+      desktopMenu[5].classList.remove("active");
+      desktopMenu[8].classList.remove("active");
+      desktopMenu[11].classList.add("active");
+      desktopMenu[14].classList.remove("active");
+
+      desktopMenu[3].classList.remove("subsection_active");
+      desktopMenu[4].classList.remove("subsection_active");
+      desktopMenu[6].classList.remove("subsection_active");
+      desktopMenu[7].classList.remove("subsection_active");
+      desktopMenu[9].classList.remove("subsection_active");
+      desktopMenu[10].classList.remove("subsection_active");
+      desktopMenu[12].classList.add("subsection_active");
+      desktopMenu[13].classList.add("subsection_active");
     } else if (current == 10) {
       desktopMenu[0].classList.remove("active");
       desktopMenu[1].classList.remove("active");
       desktopMenu[2].classList.remove("active");
-      desktopMenu[3].classList.remove("active");
-      desktopMenu[4].classList.remove("active");
       desktopMenu[5].classList.remove("active");
-      desktopMenu[6].classList.add("active");
+      desktopMenu[8].classList.remove("active");
+      desktopMenu[11].classList.remove("active");
+      desktopMenu[14].classList.add("active");
+
+      desktopMenu[3].classList.remove("subsection_active");
+      desktopMenu[4].classList.remove("subsection_active");
+      desktopMenu[6].classList.remove("subsection_active");
+      desktopMenu[7].classList.remove("subsection_active");
+      desktopMenu[9].classList.remove("subsection_active");
+      desktopMenu[10].classList.remove("subsection_active");
+      desktopMenu[12].classList.remove("subsection_active");
+      desktopMenu[13].classList.remove("subsection_active");
     }
 
   }, 300);
@@ -159,6 +222,54 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   desktopMenu[3].addEventListener("click", function() {
+    if (current !== 2) {
+      var video = slides[current].children[0];
+      var text = slides[current].children[1];
+      if (video) pauseVideo(video);
+      slides[current].classList.remove("active");
+      if (text) text.classList.remove("active");
+
+      current = 2;
+
+      video = slides[current].children[0];
+      if (video) playVideo(video);
+      slides[current].classList.add("active");
+
+      setTimeout(function() {
+        text = slides[current].children[1];
+        if (text) text.classList.add("active");
+      }, 1000);
+
+      arrowLeft.classList.remove("hide");
+      arrowRight.classList.remove("hide");
+    }
+  });
+
+  desktopMenu[4].addEventListener("click", function() {
+    if (current !== 3) {
+      var video = slides[current].children[0];
+      var text = slides[current].children[1];
+      if (video) pauseVideo(video);
+      slides[current].classList.remove("active");
+      if (text) text.classList.remove("active");
+
+      current = 3;
+
+      video = slides[current].children[0];
+      if (video) playVideo(video);
+      slides[current].classList.add("active");
+
+      setTimeout(function() {
+        text = slides[current].children[1];
+        if (text) text.classList.add("active");
+      }, 1000);
+
+      arrowLeft.classList.remove("hide");
+      arrowRight.classList.remove("hide");
+    }
+  });
+
+  desktopMenu[5].addEventListener("click", function() {
     if (current !== 4) {
       var video = slides[current].children[0];
       var text = slides[current].children[1];
@@ -182,7 +293,55 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  desktopMenu[4].addEventListener("click", function() {
+  desktopMenu[6].addEventListener("click", function() {
+    if (current !== 4) {
+      var video = slides[current].children[0];
+      var text = slides[current].children[1];
+      if (video) pauseVideo(video);
+      slides[current].classList.remove("active");
+      if (text) text.classList.remove("active");
+
+      current = 4;
+
+      video = slides[current].children[0];
+      if (video) playVideo(video);
+      slides[current].classList.add("active");
+
+      setTimeout(function() {
+        text = slides[current].children[1];
+        if (text) text.classList.add("active");
+      }, 1000);
+
+      arrowLeft.classList.remove("hide");
+      arrowRight.classList.remove("hide");
+    }
+  });
+
+  desktopMenu[7].addEventListener("click", function() {
+    if (current !== 5) {
+      var video = slides[current].children[0];
+      var text = slides[current].children[1];
+      if (video) pauseVideo(video);
+      slides[current].classList.remove("active");
+      if (text) text.classList.remove("active");
+
+      current = 5;
+
+      video = slides[current].children[0];
+      if (video) playVideo(video);
+      slides[current].classList.add("active");
+
+      setTimeout(function() {
+        text = slides[current].children[1];
+        if (text) text.classList.add("active");
+      }, 1000);
+
+      arrowLeft.classList.remove("hide");
+      arrowRight.classList.remove("hide");
+    }
+  });
+
+  desktopMenu[8].addEventListener("click", function() {
     if (current !== 6) {
       var video = slides[current].children[0];
       var text = slides[current].children[1];
@@ -206,7 +365,55 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  desktopMenu[5].addEventListener("click", function() {
+  desktopMenu[9].addEventListener("click", function() {
+    if (current !== 6) {
+      var video = slides[current].children[0];
+      var text = slides[current].children[1];
+      if (video) pauseVideo(video);
+      slides[current].classList.remove("active");
+      if (text) text.classList.remove("active");
+
+      current = 6;
+
+      video = slides[current].children[0];
+      if (video) playVideo(video);
+      slides[current].classList.add("active");
+
+      setTimeout(function() {
+        text = slides[current].children[1];
+        if (text) text.classList.add("active");
+      }, 1000);
+
+      arrowLeft.classList.remove("hide");
+      arrowRight.classList.remove("hide");
+    }
+  });
+
+  desktopMenu[10].addEventListener("click", function() {
+    if (current !== 7) {
+      var video = slides[current].children[0];
+      var text = slides[current].children[1];
+      if (video) pauseVideo(video);
+      slides[current].classList.remove("active");
+      if (text) text.classList.remove("active");
+
+      current = 7;
+
+      video = slides[current].children[0];
+      if (video) playVideo(video);
+      slides[current].classList.add("active");
+
+      setTimeout(function() {
+        text = slides[current].children[1];
+        if (text) text.classList.add("active");
+      }, 1000);
+
+      arrowLeft.classList.remove("hide");
+      arrowRight.classList.remove("hide");
+    }
+  });
+
+  desktopMenu[11].addEventListener("click", function() {
     if (current !== 8) {
       var video = slides[current].children[0];
       var text = slides[current].children[1];
@@ -230,7 +437,55 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  desktopMenu[6].addEventListener("click", function() {
+  desktopMenu[12].addEventListener("click", function() {
+    if (current !== 8) {
+      var video = slides[current].children[0];
+      var text = slides[current].children[1];
+      if (video) pauseVideo(video);
+      slides[current].classList.remove("active");
+      if (text) text.classList.remove("active");
+
+      current = 8;
+
+      video = slides[current].children[0];
+      if (video) playVideo(video);
+      slides[current].classList.add("active");
+
+      setTimeout(function() {
+        text = slides[current].children[1];
+        if (text) text.classList.add("active");
+      }, 1000);
+
+      arrowLeft.classList.remove("hide");
+      arrowRight.classList.remove("hide");
+    }
+  });
+
+  desktopMenu[13].addEventListener("click", function() {
+    if (current !== 9) {
+      var video = slides[current].children[0];
+      var text = slides[current].children[1];
+      if (video) pauseVideo(video);
+      slides[current].classList.remove("active");
+      if (text) text.classList.remove("active");
+
+      current = 9;
+
+      video = slides[current].children[0];
+      if (video) playVideo(video);
+      slides[current].classList.add("active");
+
+      setTimeout(function() {
+        text = slides[current].children[1];
+        if (text) text.classList.add("active");
+      }, 1000);
+
+      arrowLeft.classList.remove("hide");
+      arrowRight.classList.remove("hide");
+    }
+  });
+
+  desktopMenu[14].addEventListener("click", function() {
     if (current !== 10) {
       var video = slides[current].children[0];
       var text = slides[current].children[1];

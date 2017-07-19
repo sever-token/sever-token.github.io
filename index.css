@@ -48,6 +48,19 @@ nav {
 .logo:hover {
   cursor: pointer;
 }
+.subsection {
+  height: 20px;
+  margin-bottom: 0;
+  padding-left: 15px;
+  font-size: 15px;
+  display: none;
+}
+.subsection:hover {
+  cursor: pointer;
+}
+.subsection_active {
+  display: block;
+}
 .text a {
   color: white;
 }
