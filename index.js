@@ -591,7 +591,10 @@ document.addEventListener("DOMContentLoaded", function() {
   handleResize();
 
   function playVideo(video) {
-    if (video.paused) {
+    if (video.src == 'https://s3-eu-west-1.amazonaws.com/sever-token/VIDEO/VIDEO-03/ARCTIC.mp4#t=17') {
+      video.play();
+    } else {
+      video.currentTime = 0;
       video.play();
     }
   }
