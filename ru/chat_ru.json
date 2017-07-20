@@ -1,0 +1,33 @@
+{
+    "messages1":[
+        "Похоже, вы сейчас в",
+        "Вот ваши 100.00 токенов SVR, чтобы вы развлеклись пока находитесь на сайте.",
+        "Что-то не так?",
+        "Не волнуйтесь. Если в кошельке меньше 100.00 SVR, которые мы вам отправили, то это потому что баланс SEVER зависит от вашего местоположения.",
+        "Сейчас вы ниже 60º широты, и доступный вам баланс ниже 100.00 SVR",
+        "Итак, отправимся в Арктику! Где бы вы хотели оказаться?",
+        "<div>Murmansk, RU</div><div>Tromsø, NO</div><div>Reykjavik, IS</div><div>Anchorage, US</div>",
+        "Добро пожаловать в <‘choice 1’>. Ваше значение широты < lat, ‘choice 1’ >",
+        "Обратите внимание, ваш баланс SVR увеличился!",
+        "Пока вы здесь, можете расплачиваться токенами SVR в магазинах и заведениях, которые их принимают.",
+        "Хотите сходить в местный ресторан?",
+        "<div>Оплатить ужин в ресторане – 6.00 SVR</div>",
+        "Надеюсь, вам понравилась еда!",
+        "Используя токены SVR, вы делаете жизнь на севере дешевле. Более того, вы вносите вклад в развитие сетевой и ответственной экономики Арктики.",
+        "На этом ваш краткий опыт использования SEVER окончен. Узнайте больше, исследуя сайт.",
+        "Оставайтесь с нами на связи. И не забывайте, будущее - это север."
+    ],
+    "messages2":[
+        "Похоже, вы сейчас в",
+        "Вот ваши 100.00 токенов SVR, чтобы вы развлеклись пока находитесь на сайте.",
+        "Что-то не так?",
+        "Не волнуйтесь. Если в кошельке меньше 100.00 SVR, которые мы вам отправили, то это потому что баланс SEVER зависит от вашего местоположения.",
+        "Сейчас вы выше 60º широты, и доступный вам баланс выше 100.00 SVR",
+        "Great, you’re already in the Arctic! You can start using your SVR tokens in every shop and business that accepts them around you. Why not giving it a try?",
+        "<div>Buy groceries at local shop – 16.00 SVR</div>",
+        "Hope you enjoyed your meal!",
+        "Paying in SVR makes everything cheaper in the North. What is more, you contribute to developing a networked and responsible Arctic economy.",
+        "You’ve reached the end of this quick introduction to SEVER. Learn more by exploring the website",
+        "Please keep in touch. And don’t forget, the future is north."
+    ]
+}
