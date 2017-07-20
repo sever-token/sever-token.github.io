@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
               clearInterval(int);
             }
           }
-        }, 1000);
+        }, 7000);
       } else {
         messagesArray = messagesArray.messages2;
 
