@@ -160,13 +160,13 @@ document.addEventListener("DOMContentLoaded", function() {
               clearInterval(int);
             }
           }
-        }, 1000);
+        }, 7000);
       }
 
       closeButton.addEventListener("click", function() {
         chatEl.classList.remove("active");
         clearInterval(int);
       });
-    }, 1000);
+    }, 24000);
   }
 });
