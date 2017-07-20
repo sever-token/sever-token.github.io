@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
       desktopMenu[9].classList.remove("subsection_active");
       desktopMenu[10].classList.remove("subsection_active");
       desktopMenu[11].classList.remove("subsection_active");
-      desktopMenu[12].classList.remove("subsection_active");
       desktopMenu[13].classList.remove("subsection_active");
       desktopMenu[14].classList.remove("subsection_active");
     } else if (current == 1) {
@@ -61,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function() {
       desktopMenu[9].classList.remove("subsection_active");
       desktopMenu[10].classList.remove("subsection_active");
       desktopMenu[11].classList.remove("subsection_active");
-      desktopMenu[12].classList.remove("subsection_active");
       desktopMenu[13].classList.remove("subsection_active");
       desktopMenu[14].classList.remove("subsection_active");
     } else if (current == 2 || current == 3) {
@@ -80,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function() {
       desktopMenu[9].classList.remove("subsection_active");
       desktopMenu[10].classList.remove("subsection_active");
       desktopMenu[11].classList.remove("subsection_active");
-      desktopMenu[12].classList.remove("subsection_active");
       desktopMenu[13].classList.remove("subsection_active");
       desktopMenu[14].classList.remove("subsection_active");
     } else if (current == 4 || current == 5) {
@@ -99,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function() {
       desktopMenu[9].classList.remove("subsection_active");
       desktopMenu[10].classList.remove("subsection_active");
       desktopMenu[11].classList.remove("subsection_active");
-      desktopMenu[12].classList.remove("subsection_active");
       desktopMenu[13].classList.remove("subsection_active");
       desktopMenu[14].classList.remove("subsection_active");
     } else if (current == 6 || current == 7 || current == 8) {
@@ -118,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function() {
       desktopMenu[9].classList.add("subsection_active");
       desktopMenu[10].classList.add("subsection_active");
       desktopMenu[11].classList.add("subsection_active");
-      desktopMenu[12].classList.remove("subsection_active");
       desktopMenu[13].classList.remove("subsection_active");
       desktopMenu[14].classList.remove("subsection_active");
     } else if (current == 9 || current == 10) {
@@ -137,8 +132,8 @@ document.addEventListener("DOMContentLoaded", function() {
       desktopMenu[9].classList.remove("subsection_active");
       desktopMenu[10].classList.remove("subsection_active");
       desktopMenu[11].classList.remove("subsection_active");
-      desktopMenu[12].classList.add("subsection_active");
       desktopMenu[13].classList.add("subsection_active");
+      desktopMenu[14].classList.add("subsection_active");
     } else if (current == 11) {
       desktopMenu[0].classList.remove("active");
       desktopMenu[1].classList.remove("active");
@@ -155,7 +150,6 @@ document.addEventListener("DOMContentLoaded", function() {
       desktopMenu[9].classList.remove("subsection_active");
       desktopMenu[10].classList.remove("subsection_active");
       desktopMenu[11].classList.remove("subsection_active");
-      desktopMenu[12].classList.remove("subsection_active");
       desktopMenu[13].classList.remove("subsection_active");
       desktopMenu[14].classList.remove("subsection_active");
     }
