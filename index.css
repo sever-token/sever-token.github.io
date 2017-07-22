@@ -48,6 +48,12 @@ nav {
 .logo:hover {
   cursor: pointer;
 }
+.logo_nav {
+  display: block;
+}
+nav > ul > li {
+  display: none;
+}
 .subsection {
   height: 20px;
   margin-bottom: 0;
@@ -189,6 +195,9 @@ h1 {
     max-width: 1400px;
     z-index: 3;
     padding: 40px;
+  }
+  nav > ul > li {
+    display: block;
   }
   nav li {
     margin-bottom: 2px;
