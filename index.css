@@ -155,6 +155,12 @@ h1 {
   color: #F8F8F8;
   text-decoration: none;
 }
+.arrow {
+  display: none;
+}
+.sound {
+  display: none;
+}
 .sound:hover {
   cursor: pointer;
 }
@@ -169,6 +175,7 @@ h1 {
     font-size: .8em;
   }
   .sound {
+    display: block;
     background-image: url('/sound_on.png');
     position: fixed;
     left: 42px;
@@ -260,6 +267,7 @@ h1 {
     opacity: .7;
   }
   .arrow {
+    display: block;
     position: fixed;
     z-index: 999;
     top: 50%;
