@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var current = 0;
   var soundStatus = true;
 
-  sound.addEventListener('click', function () {
+  sound.addEventListener('click', function (e) {
     if (soundStatus) {
       sound.src = '/sound_on.png';
       soundStatus = false;
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
       soundStatus = true;
       audio.muted = false;
     }
-  })
+  });
 
   setInterval(function() {
     if (current == 0) {

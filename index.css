@@ -23,6 +23,10 @@ video {
 nav {
   padding: 20px;
 }
+a {
+  color: white;
+  text-decoration: none;
+}
 #mobile video {
   margin-bottom: 20px;
 }
@@ -34,6 +38,7 @@ nav {
 }
 #mobile nav {
   padding-top: 30px;
+  padding-bottom: 5px;
 }
 .logo {
   position: fixed;
@@ -51,8 +56,8 @@ nav {
 .logo_nav {
   display: block;
 }
-nav > ul > li {
-  display: none;
+nav > ul {
+  margin-top: 40px;
 }
 .subsection {
   height: 20px;
@@ -83,7 +88,6 @@ h1 {
 
 .chat li div {
   cursor: pointer;
-
   border: 1px solid black;
   padding: 5px;
   margin-bottom: 5px;
@@ -170,10 +174,16 @@ h1 {
 .sound:hover {
   cursor: pointer;
 }
+#mobile_menu {
+  margin-top: 50px;
+}
 
 @media only screen and (min-width: 1025px) {
   body {
     overflow: hidden;
+  }
+  #mobile_menu {
+    display: none;
   }
   .lang {
     position: fixed;
@@ -195,6 +205,9 @@ h1 {
     max-width: 1400px;
     z-index: 3;
     padding: 40px;
+  }
+  nav > ul {
+    margin-top: 0;
   }
   nav > ul > li {
     display: block;
